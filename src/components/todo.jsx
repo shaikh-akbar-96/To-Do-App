@@ -2,39 +2,43 @@ import React, { useState } from "react";
 import "../App.css";
 
 const ToDO = () => {
-  const [tasks, setTasks] = useState([]);
-  const [newTask, setNewTask] = useState("");
+  const [item, setItem] = useState([]);
+  const [newItem, setNewItem] = useState("");
 
   const addTask = () => {
-    if (newTask.trim() !== "") {
-      setTasks([...tasks, { id: Date.now(), text: newTask }]);
-      setNewTask("");
+    if (newItem.trim() !== "") {
+      setItem([...item, { id: Date.now(), text: newItem }]);
+      setNewItem("");
     }
   };
 
   const deleteTask = (taskId) => {
-    const updatedTasks = tasks.filter((task) => task.id !== taskId);
-    setTasks(updatedTasks);
+    const updatedTasks = item.filter((task) => task.id !== taskId);
+    setItem(updatedTasks);
   };
 
   return (
     <div className="App">
       <h1>React To-Do App</h1>
-      <div>
+      <div className="inputText">
         <input
           type="text"
-          value={newTask}
-          onChange={(e) => setNewTask(e.target.value)}
+          value={newItem}
+          onChange={(e) => setNewItem(e.target.value)}
           placeholder="Enter a new task"
         />
-        <button onClick={addTask}>Add Task</button>
+        <br />
+        <button onClick={addTask} className="btnstyle">Add Task</button>
       </div>
-      {tasks.map((task) => (
-        <div key={task.id}>
-          {task.text}
-          <button onClick={() => deleteTask(task.id)}>Delete</button>
-        </div>
-      ))}
+      <div className="tasks">
+        {item.map((task) => (
+          <div key={task.id}>
+            {task.text}
+            <button onClick={() => deleteTask(task.id)}>Delete</button>
+          </div>
+        ))}
+        <br />
+      </div>
     </div>
   );
 };
