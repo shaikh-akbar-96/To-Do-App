@@ -28,11 +28,14 @@ const ToDO = () => {
           placeholder="Enter a new task"
         />
         <br />
-        <button onClick={addTask} className="btnstyle">Add Task</button>
+        <button onClick={addTask} className="btnstyle">
+          Add Task
+        </button>
       </div>
+      <br />
       <div className="tasks">
         {item.map((task) => (
-          <div key={task.id}>
+          <div key={task.id} className="newItems">
             {task.text}
             <button onClick={() => deleteTask(task.id)}>Delete</button>
           </div>
