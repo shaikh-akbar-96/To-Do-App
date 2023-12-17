@@ -8,9 +8,41 @@
   text-align: center;
 }
 
-.input_text {
-  width: auto;
+.heading {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #2c3e50; /* Dark grayish blue color */
   text-align: center;
+  margin-top: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.input_text {
+  width: 200px;
+  text-align: center;
+  border-radius: 25px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid #3498db;
+  outline: none;
+  transition: border-color 0.3s;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  background-color: #ecf0f1;
+
+  color: #333;
+
+  &:hover {
+    border-color: #2980b9;
+
+    &:focus {
+      border-color: #e74c3c;
+    }
+  }
 }
 
 .tasks {
@@ -35,6 +67,39 @@
   width: 100%;
 }
 
+.btnstyle,
 .deletebtn {
-  width: auto;
+  display: inline-block;
+  padding: 8px 8px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 50px;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btnstyle {
+  background-color: #3498db;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btnstyle:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+.deletebtn {
+  background-color: #e74c3c;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.deletebtn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
 }

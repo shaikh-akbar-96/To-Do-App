@@ -20,7 +20,7 @@ const ToDo = () => {
 
   return (
     <div className="main">
-      <h2>React To-Do App</h2>
+      <h2 className="heading">React To-Do App</h2>
       <br />
       <div className="inputText">
         <div>
