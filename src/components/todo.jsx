@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../App.css";
 
-const ToDO = () => {
+const ToDo = () => {
   const [item, setItem] = useState([]);
   const [newItem, setNewItem] = useState("");
 
@@ -18,7 +18,7 @@ const ToDO = () => {
   };
 
   return (
-    <div className="App">
+    <div className="main">
       <h1>React To-Do App</h1>
       <div className="inputText">
         <input
@@ -46,4 +46,4 @@ const ToDO = () => {
   );
 };
 
-export default ToDO;
+export default ToDo;

@@ -14,6 +14,7 @@
 
 .inputText {
   margin-top: 20px;
+  width: 33%;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -34,7 +35,6 @@
 .newItems {
   display: flex;
   flex-wrap: wrap;
-  width: 33%;
   justify-content: space-evenly;
   flex-direction: column;
 }
