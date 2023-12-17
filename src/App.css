@@ -1,40 +1,9 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
-.App {
-  width: 100%;
+body {
   height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.inputText {
-  margin-top: 20px;
-  width: 33%;
-  width: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.btnstyle {
-  width: auto;
-}
-
-.tasks {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
   width: 100%;
-  justify-content: space-between;
-}
-
-.newItems {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  flex-direction: column;
 }

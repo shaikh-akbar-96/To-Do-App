@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../App.css";
+import "./ToDo.css";
 
 const ToDo = () => {
   const [item, setItem] = useState([]);
@@ -19,25 +20,35 @@ const ToDo = () => {
 
   return (
     <div className="main">
-      <h1>React To-Do App</h1>
+      <h2>React To-Do App</h2>
+      <br />
       <div className="inputText">
-        <input
-          type="text"
-          value={newItem}
-          onChange={(e) => setNewItem(e.target.value)}
-          placeholder="Enter a new task"
-        />
+        <div>
+          <input
+            type="text"
+            value={newItem}
+            onChange={(e) => setNewItem(e.target.value)}
+            placeholder="Enter a new task"
+            className="input_text"
+          />
+        </div>
         <br />
-        <button onClick={addTask} className="btnstyle">
-          Add Task
-        </button>
+        <div>
+          <button onClick={addTask} className="btnstyle">
+            Add Task
+          </button>
+        </div>
       </div>
       <br />
       <div className="tasks">
         {item.map((task) => (
           <div key={task.id} className="newItems">
             {task.text}
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
+            <div className="parent_button">
+              <button onClick={() => deleteTask(task.id)} className="deletebtn">
+                Delete
+              </button>
+            </div>
           </div>
         ))}
         <br />
